@@ -594,7 +594,7 @@ def move(f, g):
             else:
                 br = False
             if br:
-                brake
+                break
     elif p == 6 and y1 == 3 and y2 == 2 and x2 - x1 != 0 and board[y2][x2] == 0:
         board[y2 + 1][x2] = 0
     elif p == 12 and y2 - y1 == 2:
@@ -615,7 +615,7 @@ def move(f, g):
             else:
                 br = False
             if br:
-                brake
+                break
     elif p == 12 and y1 == 4 and y2 == 5 and x2 - x1 != 0 and board[y2][x2] == 0:
         board[y2 - 1][x2] = 0
 
