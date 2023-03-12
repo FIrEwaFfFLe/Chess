@@ -393,7 +393,7 @@ def moves(turn):
                     board[yk][xk] = kill
                     board[y][x] = p
                 if y == 3:
-                    if last_first_move[turn][x - 1]:
+                    if x != 0 and last_first_move[turn][x - 1]:
                         yk, xk = y - 1, x - 1
                         if 0 <= yk <= 7 and 0 <= xk <= 7:
                             board[yk][xk] = p
@@ -405,7 +405,7 @@ def moves(turn):
                             board[yk][xk] = 0
                             board[y][x] = p
                             board[y][x - 1] = 12
-                    if last_first_move[turn][x + 1]:
+                    if x != 7 and last_first_move[turn][x + 1]:
                         yk, xk = y - 1, x + 1
                         if 0 <= yk <= 7 and 0 <= xk <= 7:
                             board[yk][xk] = p
@@ -460,7 +460,7 @@ def moves(turn):
                     board[yk][xk] = kill
                     board[y][x] = p
                 if y == 4:
-                    if last_first_move[turn][x - 1]:
+                    if x != 0 and last_first_move[turn][x - 1]:
                         yk, xk = y + 1, x - 1
                         if 0 <= yk <= 7 and 0 <= xk <= 7:
                             board[yk][xk] = p
@@ -472,7 +472,7 @@ def moves(turn):
                             board[yk][xk] = 0
                             board[y][x] = p
                             board[y][x - 1] = 6
-                    if last_first_move[turn][x + 1]:
+                    if x != 7 and last_first_move[turn][x + 1]:
                         yk, xk = y + 1, x + 1
                         if 0 <= yk <= 7 and 0 <= xk <= 7:
                             board[yk][xk] = p
@@ -671,12 +671,3 @@ board = [[9, 11, 10, 8, 7, 10, 11, 9],
 last_first_move = [[False] * 8, [False] * 8]
 castle = [[True, True, True], [True, True, True]]
 kings = [[7, 4], [0, 4]]
-
-
-
-
-
-
-
-
-
