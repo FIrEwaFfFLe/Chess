@@ -580,30 +580,42 @@ def move(f, g):
         last_first_move[0][x1] = True
     elif p == 6 and y2 == 0:
         # PROMOTE
-        s = input("Promote: ")
-        if s == "Q":
-            prom = 2
-        elif s == "R":
-            prom = 3
-        elif s == "B":
-            prom = 4
-        elif s == "K":
-            prom = 5
+        while True:
+            br = True
+            s = input("Promote: ")
+            if s == "Q":
+                prom = 2
+            elif s == "R":
+                prom = 3
+            elif s == "B":
+                prom = 4
+            elif s == "K":
+                prom = 5
+            else:
+                br = False
+            if br:
+                brake
     elif p == 6 and y1 == 3 and y2 == 2 and x2 - x1 != 0 and board[y2][x2] == 0:
         board[y2 + 1][x2] = 0
     elif p == 12 and y2 - y1 == 2:
         last_first_move[1][x1] = True
     elif p == 12 and y2 == 7:
         # PROMOTE
-        s = input("Promote: ")
-        if s == "Q":
-            prom = 8
-        elif s == "R":
-            prom = 9
-        elif s == "B":
-            prom = 10
-        elif s == "K":
-            prom = 11
+        while True:
+            br = True
+            s = input("Promote: ")
+            if s == "Q":
+                prom = 8
+            elif s == "R":
+                prom = 9
+            elif s == "B":
+                prom = 10
+            elif s == "K":
+                prom = 11
+            else:
+                br = False
+            if br:
+                brake
     elif p == 12 and y1 == 4 and y2 == 5 and x2 - x1 != 0 and board[y2][x2] == 0:
         board[y2 - 1][x2] = 0
 
