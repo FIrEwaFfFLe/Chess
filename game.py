@@ -741,7 +741,9 @@ def move(asd):
                     continue
                 if x == x1:
                     ux = True
-                if y == y1:
+                elif y == y1:
+                    uy = True
+                else:
                     uy = True
         if uy:
             end += chr(x1 + 97)
