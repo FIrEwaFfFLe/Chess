@@ -5,4 +5,4 @@ First, input a number - the depth of the AI that you want (0 for no AI, 2 player
 
 P.s. - when you promote a pawn, type Q, R, N or B in the terminal, standing for the name of the piece you want to promote to.
 
-P.p.s. - for MacOS users, replace "sprites/" in frontend.py lines 53, 58, 116, 122 with "Chess-main/sprites/".
+P.p.s. - for MacOS users, replace "sprites/" in frontend.py lines 53, 58, 116, 122 with "Chess-main/sprites/" (or your folder if renamed).
