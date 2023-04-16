@@ -113,13 +113,13 @@ def main():
         for y in range(8):
             for x in range(8):
                 if game.board[y][x] != 0:
-                    pie[cnt].update("Chess-main/sprites/" + qwerty[game.board[y][x]] + ".png", x * u, y * u)
+                    pie[cnt].update("sprites/" + qwerty[game.board[y][x]] + ".png", x * u, y * u)
                     cnt += 1
     else:
         for y in range(8):
             for x in range(8):
                 if game.board[y][x] != 0:
-                    pie[cnt].update("Chess-main/sprites/" + qwerty[game.board[y][x]] + ".png", (7 - x) * u, (7 - y) * u)
+                    pie[cnt].update("sprites/" + qwerty[game.board[y][x]] + ".png", (7 - x) * u, (7 - y) * u)
                     cnt += 1
     for i in range(cnt, len(pie)):
         sprite_group.remove(pie[i])
